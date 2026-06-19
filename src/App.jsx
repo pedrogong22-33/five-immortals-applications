@@ -555,6 +555,10 @@ const STR = {
 /* Replace LOGO_SRC with the final hosted path when this goes live, e.g. "/assets/logo.png" */
 const LOGO_SRC = "/logo.png";
 
+/* Free image hosting for application photos (so emails get a clean clickable link
+   instead of a giant base64 block). Get a free key at https://api.imgbb.com/ */
+const IMGBB_API_KEY = "fea6dd0306fda074b778b6bb60df9018";
+
 function Seal({ size = 56 }) {
   return (
     <img
@@ -820,11 +824,34 @@ export default function App() {
     setStorageError(false);
     try {
       const { photo, ...rest } = form;
+      let photoField = "No photo provided";
+
+      if (photo) {
+        try {
+          const base64Only = photo.split(",")[1]; // strip the data:image/...;base64, prefix
+          const imgbbForm = new FormData();
+          imgbbForm.append("key", IMGBB_API_KEY);
+          imgbbForm.append("image", base64Only);
+          const imgbbResponse = await fetch("https://api.imgbb.com/1/upload", {
+            method: "POST",
+            body: imgbbForm,
+          });
+          const imgbbData = await imgbbResponse.json();
+          if (imgbbData && imgbbData.success && imgbbData.data && imgbbData.data.url) {
+            photoField = imgbbData.data.url;
+          } else {
+            photoField = "Photo upload failed — applicant submitted a photo but it could not be hosted.";
+          }
+        } catch (photoErr) {
+          photoField = "Photo upload failed — applicant submitted a photo but it could not be hosted.";
+        }
+      }
+
       const record = {
         ...rest,
         submittedAt: new Date().toISOString(),
         _subject: `New application: ${form.name || "Unnamed applicant"}`,
-        "Photo (base64 — paste into a browser address bar to view, or use an online base64-to-image converter)": photo || "No photo provided",
+        "Photo": photoField,
       };
 
       const response = await fetch("https://formspree.io/f/maqzzwop", {
