@@ -16,7 +16,7 @@ const COURSES_2026 = [
     title: "Wudang Tai He Fist & Natural Healing Foundational Methods",
     teacher: "Taught by Master Li Shifu",
     summary: "Wudang martial arts and longevity techniques, applicable for both combat and personal healing, to address physical issues and promote overall well-being.",
-    purpose: "To learn Wudang martial arts and longevity techniques, applicable for both combat and personal healing. Participants can address their physical issues, promoting overall health and well-being.",
+    purpose: "To learn Wudang martial arts and longevity techniques, applicable for both combat and personal healing. Participants address their own physical issues while building genuine combat skill, promoting overall health and well being. Tai He Fist is one of the foundational systems taught at the temple, combining the practical power of striking, locking, and footwork with the internal cultivation that distinguishes Wudang martial arts from purely external styles. Students leave with a complete 24 form routine, an understanding of combat power generation, and a set of self healing tools they can use for the rest of their lives.",
     schedule: [
       {
         label: "Theory",
@@ -69,7 +69,7 @@ const COURSES_2026 = [
     title: "Water and Fire Tai Chi Fist & Self-Healing",
     teacher: "Taught by Master Li Shifu",
     summary: "Ancient Eastern methods of guiding and cultivating qi (Dao Yin) for health, self-treatment of injuries, and Tai Chi combat methods for protection.",
-    purpose: "Studying ancient Eastern guiding and cultivating qi (Dao Yin) for health and self-treatment of injuries. Tai Chi combat methods for protection.",
+    purpose: "Studying ancient Eastern guiding and cultivating qi (Dao Yin) for health and self treatment of injuries. Tai Chi combat methods for protection. Water and Fire Tai Chi is named for the way it joins two opposite qualities, the softness and yielding of water with the directness and power of fire, into a single coherent system. Students learn how to move from total relaxation into explosive power without losing structure, how to read and redirect an opponent's force through push hands, and how to apply the same principles of guided breath and circulation to heal old injuries and chronic pain. It is a complete practice for anyone who wants Tai Chi as both a martial art and a long term health discipline, not just a slow form performed for its own sake.",
     schedule: [
       {
         label: "Theory",
@@ -181,7 +181,7 @@ const COURSES_2026 = [
     title: "Flower of Life: Tian Gang Ba Bu & Five Dragons Pure Yang",
     teacher: "Taught by Master Li Shifu",
     summary: "Heavenly Dipper Eight Steps (beginner level) combined with the Five Dragons Pure Yang Body Protection Skill, for combat and self-healing.",
-    purpose: "Obtaining cosmic energy assistance. Practicing routines on the Flower of Life pattern for combat and self-healing of injuries.",
+    purpose: "Obtaining cosmic energy assistance. Practicing routines on the Flower of Life pattern for combat and self healing of injuries. Tian Gang Ba Bu, the Heavenly Dipper Eight Steps, is a rare practice rooted in the observation of the Big Dipper constellation and its role in classical Daoist cosmology. Paired with the Five Dragons Pure Yang Body Protection Skill, the course teaches footwork that follows the star pattern, mantras tied to each step, and a body protection method developed for both combat application and personal resilience. Students also work through pain relief techniques including moxibustion, cupping, and music therapy, so the course delivers both a distinctive martial skill and a set of healing tools used by generations of Wudang practitioners.",
     schedule: [
       {
         label: "Theory",
@@ -218,7 +218,7 @@ const COURSES_2026 = [
     title: "Beginner Daoist Medicine",
     teacher: "Taught by Master Li Shifu",
     summary: "An introduction to Daoist medicine: simple, natural healing techniques for personal health and helping others through traditional Daoist practice.",
-    purpose: "This course teaches simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine.",
+    purpose: "This course teaches simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine. Across twelve days students move through the full toolkit of traditional Daoist medical practice, acupuncture, moxibustion, cupping, bloodletting, gua sha, herbal recognition and preparation, fire healing, and Five Elements music therapy, building toward a working knowledge of around forty common illnesses and the herbal formulas used to treat them. Because the field is broad, study material is sent ahead of arrival so students walk in already familiar with the underlying Yin Yang and Five Elements framework. Graduates leave able to genuinely help themselves, their families, and their communities, which is part of why this course has become one of the most requested in the schedule.",
     schedule: [
       {
         label: "Theory",
@@ -300,7 +300,7 @@ const COURSES_2026 = [
     title: "Dragon Heart Sword & Natural Healing Methods",
     teacher: "Taught by Master Li Shifu",
     summary: "Sword fundamentals and the Dragon Form Sword routine, combined with natural healing methods, history and lineage of the art.",
-    purpose: "Historical lineage, development, and current status of the sword arts. Practicing routines on the Flower of Life, with natural healing methods for pain relief.",
+    purpose: "Historical lineage, development, and current status of the sword arts. Practicing routines on the Flower of Life, with natural healing methods for pain relief. The Dragon Heart Sword is Wudang's signature weapon form, built on the idea that the sword extends the practitioner's own internal energy rather than acting as a separate tool. Students begin with hand, eye, body, and footwork fundamentals before moving into the full Dragon Form Sword routine, learning how breath, intention, and blade move as one continuous line. The course also covers the same fire therapy, moxibustion, cupping, and herbal pain relief methods taught across the temple's martial curriculum, so students finish with both a complete weapon form and a practical set of recovery techniques for the demands of serious training.",
     schedule: [
       {
         label: "Theory",
@@ -337,7 +337,7 @@ const COURSES_2026 = [
     title: "Beginner Daoist Medicine (2nd edition)",
     teacher: "Taught by Master Li Shifu",
     summary: "A second 2026 edition of the Daoist Medicine foundations course, identical in content to the September session.",
-    purpose: "This course teaches simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine.",
+    purpose: "This course teaches simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine. Across twelve days students move through the full toolkit of traditional Daoist medical practice, acupuncture, moxibustion, cupping, bloodletting, gua sha, herbal recognition and preparation, fire healing, and Five Elements music therapy, building toward a working knowledge of around forty common illnesses and the herbal formulas used to treat them. Because the field is broad, study material is sent ahead of arrival so students walk in already familiar with the underlying Yin Yang and Five Elements framework. Graduates leave able to genuinely help themselves, their families, and their communities, which is part of why this course has become one of the most requested in the schedule.",
     schedule: [
       {
         label: "Theory",
