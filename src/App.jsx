@@ -6,11 +6,64 @@ import React, { useState, useEffect, useRef } from "react";
 
 const COURSES_2026 = [
   {
+    id: "tai-he-fist-apr",
+    month: "APR",
+    day: "03",
+    dateRange: "April 3 – April 9, 2026",
+    status: "past",
+    fee: "6,900 RMB",
+    deposit: "1,900 RMB",
+    title: "Wudang Tai He Fist & Natural Healing Foundational Methods",
+    teacher: "Taught by Master Li Shifu",
+    summary: "Wudang martial arts and longevity techniques, applicable for both combat and personal healing, to address physical issues and promote overall well-being.",
+    purpose: "To learn Wudang martial arts and longevity techniques, applicable for both combat and personal healing. Participants can address their physical issues, promoting overall health and well-being.",
+    schedule: [
+      {
+        label: "Theory",
+        text: "Principles of martial application and combat methods. Methods for relieving pain including moxibustion, cupping, music therapy, qigong acupressure, and massage. Daoist etiquette and taboos.",
+      },
+      {
+        label: "Early Morning (2h)",
+        text: "Longevity Qi Gong, five forms (Expel the Old Take In the New; Red Phoenix Facing the Sun; Five Qi Return to the Source; Dragon Claw Gong; Embracing the Origin and Guarding the One). Opening the gate, clearing the orifice, 21-form rhythmic detoxification exercise, Five Tones Healing Song, methods to regulate cervical, thoracic, and lumbar spine issues.",
+      },
+      {
+        label: "Morning (3h)",
+        text: "Wudang Tai He Fist 24-form routine and combat power training.",
+      },
+      {
+        label: "Afternoon (3h)",
+        text: "Wudang Tai He Fist 24-form routine and combat power training.",
+      },
+      {
+        label: "Evening (2h)",
+        text: "Tai Chi Standing Meditation, Opening and Closing, Submerging and Floating pillar. Sitting meditation cultivating stillness.",
+      },
+    ],
+    requirements: null,
+    privateContact: null,
+  },
+  {
+    id: "taichi-french-group",
+    month: "APR",
+    day: "13",
+    dateRange: "April 13 – May 3, 2026",
+    status: "past",
+    fee: null,
+    deposit: null,
+    title: "Wudang Tai Chi Course (French Group)",
+    teacher: "Led by disciple Cheng Feng",
+    summary: "A private course for a French-speaking group, led directly by disciple Cheng Feng. Prior appointment required.",
+    purpose: "This course is privately facilitated and run directly by Cheng Feng for a French-speaking group.",
+    schedule: null,
+    requirements: null,
+    privateContact: "loan@silentclarity.school",
+  },
+  {
     id: "water-fire-taichi-jun",
     month: "JUN",
     day: "07",
     dateRange: "June 7 – 21, 2026",
-    status: "now", // happening now, not open for new applications
+    status: "now",
     fee: "9,900 RMB",
     deposit: "1,900 RMB",
     title: "Water and Fire Tai Chi Fist & Self-Healing",
@@ -68,12 +121,13 @@ const COURSES_2026 = [
     deposit: "2,600 RMB",
     title: "Secret of the Golden Flower",
     teacher: "Taught by Master Li Shifu",
+    quote: "\"The Mysterious Pass has one opening; the center of the opening contains subtlety. It comprises movement and stillness, the void, the divine, the profound and the mysterious.\"",
     summary: "A foundational Internal Alchemy (Dan Dao) course exploring the path of Daoist cultivation through classical texts including the Secret of the Golden Flower.",
-    purpose: "To help participants understand the path and methods of Daoist cultivation in China; enhance comprehension and the ability to distinguish levels of cultivation; open the gate to wisdom amid the chaos of social life; explore the meaning of life and the truths of the universe. To strengthen one's energy field and vibrational frequency, cultivate compassion, love, forgiveness and tolerance, and prepare for future opportunities to unify body and higher self.",
+    purpose: "To help participants understand the path and methods of Daoist cultivation in China; enhance each individual's comprehension and ability to distinguish different levels of cultivation; open the gate to wisdom, guiding us to find direction amidst the chaos and illusory changes of social life; discover the value and meaning of our existence; explore the meaning of life and the truths of the universe. Strengthen one's energy field and vibrational frequency; cultivate a heart of compassion, love, forgiveness, and tolerance; awaken the willingness to assist others and serve all beings. To prepare for future opportunities to unify the body and the higher self, elevate oneself, and thereby create a true body, an immortal body, and attain the Dao.",
     schedule: [
       {
-        label: "Theory",
-        text: "Primarily theory-based. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention, breathing techniques. Basics of the Microcosmic Orbit, and key points of \"49 Barriers,\" Qingjing Jing, Da Cheng Jie Yao, and the Secret of the Golden Flower itself.",
+        label: "Course Contents",
+        text: "Primarily theory-based, learning Daoist etiquette and taboos. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention methods, and different breathing techniques for various stages. Basics of the Microcosmic Orbit, explanation of key points in alchemical texts: \"49 Barriers\", \"Qingjing Jing — The Scripture of Purity and Tranquility\", \"Da Cheng Jie Yao — Essentials of the Shortcut to the Great Achievement\", \"Tai Yi Jing Hua Zong Zhi — The Secret of the Golden Flower\". Overview of Dao De Jing, Yin Fu Jing, Longmen Heart Method, Huang Ting Jing, Nei Jing Tu. Basic theory of Female Alchemy, fasting, dietary requirements, daily life regulation, and the building-the-foundation period.",
       },
       {
         label: "Early Morning (1.5h)",
@@ -85,7 +139,7 @@ const COURSES_2026 = [
       },
       {
         label: "Afternoon (3h)",
-        text: "Continuing internal alchemy practices and meditation. Daily life adjustments to aid cultivation of inner energy.",
+        text: "Continuing internal alchemy practices and meditation. Daily life adjustments to aid cultivation of inner energy and improving physical health.",
       },
       {
         label: "Evening (1.5h)",
@@ -96,6 +150,7 @@ const COURSES_2026 = [
       "Basic foundation of sitting meditation and/or cultivation of stillness (any type)",
       "No diseases or disabilities",
       "Vegetarian diet, with monastic discipline (adhering to the temple's precepts)",
+      "Destiny to learn from the master",
     ],
     privateContact: null,
   },
@@ -107,7 +162,7 @@ const COURSES_2026 = [
     status: "open",
     fee: null,
     deposit: null,
-    title: "Tai Chi, Taoist Medicine & Sitting Meditation",
+    title: "Water and Fire Tai Chi, Beginner Daoist Medicine & Sitting Meditation",
     teacher: "Facilitated by disciple Cheng Jiu",
     summary: "A combined course covering Water and Fire Tai Chi, beginner Taoist medicine, and sitting meditation, privately facilitated by disciple Cheng Jiu. Prior appointment required.",
     purpose: "This course is privately facilitated and run directly by Cheng Jiu, blending Tai Chi practice, beginner Taoist medicine, and seated meditation.",
@@ -123,18 +178,18 @@ const COURSES_2026 = [
     status: "open",
     fee: "6,900 RMB",
     deposit: "1,900 RMB",
-    title: "Tian Gang Ba Bu & Five Dragons Pure Yang",
+    title: "Flower of Life: Tian Gang Ba Bu & Five Dragons Pure Yang",
     teacher: "Taught by Master Li Shifu",
-    summary: "Flower of Life: Heavenly Dipper Eight Steps (beginner level) combined with the Five Dragons Pure Yang Body Protection Skill, for combat and self-healing.",
+    summary: "Heavenly Dipper Eight Steps (beginner level) combined with the Five Dragons Pure Yang Body Protection Skill, for combat and self-healing.",
     purpose: "Obtaining cosmic energy assistance. Practicing routines on the Flower of Life pattern for combat and self-healing of injuries.",
     schedule: [
       {
         label: "Theory",
-        text: "History and lineage of Pure Yang Gong (Chun Yang Gong). Unification of Heaven, Earth, and Human. Mantras for Heavenly Dipper protection and combat application. Pain relief through moxibustion, cupping, music therapy, and qigong acupressure.",
+        text: "History and lineage of Pure Yang Gong (Chun Yang Gong). Unification of Heaven, Earth, and Human. Mantras for Heavenly Dipper protection and combat application. Auxiliary herbal methods. Pain relief through moxibustion, cupping, music therapy, and qigong acupressure.",
       },
       {
         label: "Early Morning (2h)",
-        text: "Longevity Qi Gong, six forms. Gate-opening, 21-form detoxification, Five Tones Healing Song, Three Vertebrae Seven Forms.",
+        text: "Longevity Qi Gong, six forms. Opening the gate, clearing the orifice, 21-form rhythmic detoxification exercise, Five Tones Healing Song, Three Vertebrae Seven Forms.",
       },
       {
         label: "Morning (3h)",
@@ -160,10 +215,10 @@ const COURSES_2026 = [
     status: "open",
     fee: "13,300 RMB",
     deposit: "2,600 RMB",
-    title: "Taoist Medicine: Foundations",
+    title: "Beginner Daoist Medicine",
     teacher: "Taught by Master Li Shifu",
     summary: "An introduction to Daoist medicine: simple, natural healing techniques for personal health and helping others through traditional Daoist practice.",
-    purpose: "Simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine.",
+    purpose: "This course teaches simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine.",
     schedule: [
       {
         label: "Theory",
@@ -175,15 +230,15 @@ const COURSES_2026 = [
       },
       {
         label: "Morning (3h)",
-        text: "Acupuncture, moxibustion, cupping, bloodletting, scraping (gua sha), massage, acupressure therapy. Recognizing, harvesting, and preparing medicinal herbs.",
+        text: "Acupuncture, moxibustion, cupping, bloodletting, scraping (gua sha), massage, acupressure therapy. Recognizing, harvesting, preparing, decocting, and administering medicinal herbs.",
       },
       {
         label: "Afternoon (3h)",
-        text: "Fire healing, qigong healing techniques, Five Elements music therapy, talisman healing methods. Herbal formulas for healing common illnesses.",
+        text: "Fire healing, qigong healing techniques, Five Elements music therapy, talisman healing methods. Recognizing 60 types of herbs, with herbal formulas for healing 40 common illnesses.",
       },
       {
         label: "Evening (2h)",
-        text: "Healing Qigong, Submerging and Floating pillar, sitting meditation, Lying Dragon meditation.",
+        text: "Healing Qigong, five forms, Submerging and Floating pillar, sitting meditation, Lying Dragon meditation.",
       },
     ],
     requirements: [
@@ -201,12 +256,13 @@ const COURSES_2026 = [
     deposit: "2,600 RMB",
     title: "Secret of the Golden Flower (2nd edition)",
     teacher: "Taught by Master Li Shifu",
+    quote: "\"The Mysterious Pass has one opening; the center of the opening contains subtlety. It comprises movement and stillness, the void, the divine, the profound and the mysterious.\"",
     summary: "A second 2026 edition of the foundational Internal Alchemy (Dan Dao) course, identical in content to the July session.",
-    purpose: "To help participants understand the path and methods of Daoist cultivation in China; enhance comprehension and the ability to distinguish levels of cultivation. To strengthen one's energy field and vibrational frequency, cultivate compassion, love, forgiveness and tolerance, and prepare for future opportunities to unify body and higher self.",
+    purpose: "To help participants understand the path and methods of Daoist cultivation in China; enhance each individual's comprehension and ability to distinguish different levels of cultivation; open the gate to wisdom, guiding us to find direction amidst the chaos and illusory changes of social life; discover the value and meaning of our existence; explore the meaning of life and the truths of the universe. Strengthen one's energy field and vibrational frequency; cultivate a heart of compassion, love, forgiveness, and tolerance; awaken the willingness to assist others and serve all beings. To prepare for future opportunities to unify the body and the higher self, elevate oneself, and thereby create a true body, an immortal body, and attain the Dao.",
     schedule: [
       {
-        label: "Theory",
-        text: "Primarily theory-based. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention, breathing techniques. Basics of the Microcosmic Orbit, and key points of \"49 Barriers,\" Qingjing Jing, Da Cheng Jie Yao, and the Secret of the Golden Flower itself.",
+        label: "Course Contents",
+        text: "Primarily theory-based, learning Daoist etiquette and taboos. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention methods, and different breathing techniques for various stages. Basics of the Microcosmic Orbit, explanation of key points in alchemical texts: \"49 Barriers\", \"Qingjing Jing — The Scripture of Purity and Tranquility\", \"Da Cheng Jie Yao — Essentials of the Shortcut to the Great Achievement\", \"Tai Yi Jing Hua Zong Zhi — The Secret of the Golden Flower\". Overview of Dao De Jing, Yin Fu Jing, Longmen Heart Method, Huang Ting Jing, Nei Jing Tu. Basic theory of Female Alchemy, fasting, dietary requirements, daily life regulation, and the building-the-foundation period.",
       },
       {
         label: "Early Morning (1.5h)",
@@ -218,7 +274,7 @@ const COURSES_2026 = [
       },
       {
         label: "Afternoon (3h)",
-        text: "Continuing internal alchemy practices and meditation. Daily life adjustments to aid cultivation of inner energy.",
+        text: "Continuing internal alchemy practices and meditation. Daily life adjustments to aid cultivation of inner energy and improving physical health.",
       },
       {
         label: "Evening (1.5h)",
@@ -229,6 +285,7 @@ const COURSES_2026 = [
       "Basic foundation of sitting meditation and/or cultivation of stillness (any type)",
       "No diseases or disabilities",
       "Vegetarian diet, with monastic discipline (adhering to the temple's precepts)",
+      "Destiny to learn from the master",
     ],
     privateContact: null,
   },
@@ -240,7 +297,7 @@ const COURSES_2026 = [
     status: "open",
     fee: "9,900 RMB",
     deposit: "1,900 RMB",
-    title: "Dragon Heart Sword",
+    title: "Dragon Heart Sword & Natural Healing Methods",
     teacher: "Taught by Master Li Shifu",
     summary: "Sword fundamentals and the Dragon Form Sword routine, combined with natural healing methods, history and lineage of the art.",
     purpose: "Historical lineage, development, and current status of the sword arts. Practicing routines on the Flower of Life, with natural healing methods for pain relief.",
@@ -277,10 +334,10 @@ const COURSES_2026 = [
     status: "open",
     fee: "13,300 RMB",
     deposit: "2,600 RMB",
-    title: "Taoist Medicine: Foundations (2nd edition)",
+    title: "Beginner Daoist Medicine (2nd edition)",
     teacher: "Taught by Master Li Shifu",
-    summary: "A second 2026 edition of the Taoist Medicine foundations course, identical in content to the September session.",
-    purpose: "Simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine.",
+    summary: "A second 2026 edition of the Daoist Medicine foundations course, identical in content to the September session.",
+    purpose: "This course teaches simple, natural healing techniques aimed at personal health improvement and helping others alleviate suffering through Daoist medicine.",
     schedule: [
       {
         label: "Theory",
@@ -292,15 +349,15 @@ const COURSES_2026 = [
       },
       {
         label: "Morning (3h)",
-        text: "Acupuncture, moxibustion, cupping, bloodletting, scraping (gua sha), massage, acupressure therapy. Recognizing, harvesting, and preparing medicinal herbs.",
+        text: "Acupuncture, moxibustion, cupping, bloodletting, scraping (gua sha), massage, acupressure therapy. Recognizing, harvesting, preparing, decocting, and administering medicinal herbs.",
       },
       {
         label: "Afternoon (3h)",
-        text: "Fire healing, qigong healing techniques, Five Elements music therapy, talisman healing methods. Herbal formulas for healing common illnesses.",
+        text: "Fire healing, qigong healing techniques, Five Elements music therapy, talisman healing methods. Recognizing 60 types of herbs, with herbal formulas for healing 40 common illnesses.",
       },
       {
         label: "Evening (2h)",
-        text: "Healing Qigong, Submerging and Floating pillar, sitting meditation, Lying Dragon meditation.",
+        text: "Healing Qigong, five forms, Submerging and Floating pillar, sitting meditation, Lying Dragon meditation.",
       },
     ],
     requirements: [
@@ -460,11 +517,13 @@ const STR = {
     heroBody:
       "The only temple in Wudang where Western practitioners may reside and study within its walls, under the direct lineage of Abbot Du Song Feng.",
     ctaScroll: "Start application",
+    ctaExplore: "Courses",
     viewAllCourses: "View all 2026 courses",
     coursesPageLabel: "2026 Course Calendar",
     coursesPageTitle: "Choose your path",
     coursesPageSub: "All courses run at the Five Immortals Temple, Wudang Mountain, Hubei",
     happeningNow: "Happening Now",
+    completed: "Completed",
     seeDetails: "See details",
     applyToThisCourse: "Apply to this course",
     backToCourses: "← Back to courses",
@@ -794,7 +853,6 @@ export default function App() {
   const [form, setForm] = useState(emptyForm);
   const [submitting, setSubmitting] = useState(false);
   const [storageError, setStorageError] = useState(false);
-  const [expandedCourseId, setExpandedCourseId] = useState(null);
   const [detailCourseId, setDetailCourseId] = useState(null);
 
   function openCourseDetail(courseId) {
@@ -936,23 +994,41 @@ export default function App() {
           </h1>
           <p style={{ fontSize: 18, color: COLORS.lacquer, fontWeight: 600, margin: "0 0 18px" }}>{t.heroSubtitle}</p>
           <p style={{ fontSize: 15.5, color: "#4A4135", lineHeight: 1.6, margin: "0 0 32px" }}>{t.heroBody}</p>
-          <button
-            onClick={() => setView("courses")}
-            style={{
-              background: COLORS.lacquer,
-              color: "#fff",
-              border: "none",
-              padding: "14px 34px",
-              fontSize: 15.5,
-              fontWeight: 700,
-              borderRadius: 4,
-              cursor: "pointer",
-              letterSpacing: 0.3,
-              boxShadow: "0 6px 18px rgba(168,68,44,0.3)",
-            }}
-          >
-            {t.ctaScroll} →
-          </button>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <button
+              onClick={() => setView("form")}
+              style={{
+                background: COLORS.lacquer,
+                color: "#fff",
+                border: "none",
+                padding: "14px 34px",
+                fontSize: 15.5,
+                fontWeight: 700,
+                borderRadius: 4,
+                cursor: "pointer",
+                letterSpacing: 0.3,
+                boxShadow: "0 6px 18px rgba(168,68,44,0.3)",
+              }}
+            >
+              {t.ctaScroll} →
+            </button>
+            <button
+              onClick={() => setView("courses")}
+              style={{
+                background: "transparent",
+                color: COLORS.ink,
+                border: `1.5px solid ${COLORS.ink}`,
+                padding: "14px 34px",
+                fontSize: 15.5,
+                fontWeight: 700,
+                borderRadius: 4,
+                cursor: "pointer",
+                letterSpacing: 0.3,
+              }}
+            >
+              {t.ctaExplore}
+            </button>
+          </div>
         </section>
 
         <MountainDivider />
@@ -1004,7 +1080,7 @@ export default function App() {
     );
   }
 
-  /* ---------- Courses list (Level 1 + Level 2 expandable summary) ---------- */
+  /* ---------- Courses page (flowing article-style layout) ---------- */
   if (view === "courses") {
     return (
       <div style={{ fontFamily: "'Inter', system-ui, sans-serif", background: COLORS.paper, minHeight: "100vh" }}>
@@ -1030,7 +1106,7 @@ export default function App() {
           </button>
         </header>
 
-        <div style={{ maxWidth: 640, margin: "0 auto", padding: "36px 20px 60px" }}>
+        <div style={{ maxWidth: 680, margin: "0 auto", padding: "36px 20px 60px" }}>
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
             <Seal size={64} />
           </div>
@@ -1040,113 +1116,180 @@ export default function App() {
           <h2 style={{ fontFamily: "'Noto Serif', Georgia, serif", fontSize: 28, color: COLORS.ink, textAlign: "center", margin: "0 0 8px" }}>
             {t.coursesPageTitle}
           </h2>
-          <p style={{ fontSize: 14.5, color: "#7A6F5C", textAlign: "center", margin: "0 0 28px" }}>{t.coursesPageSub}</p>
+          <p style={{ fontSize: 14.5, color: "#7A6F5C", textAlign: "center", margin: "0 0 40px" }}>{t.coursesPageSub}</p>
 
-          {COURSES_2026.map((course) => {
-            const isOpen = expandedCourseId === course.id;
-            return (
-              <div
-                key={course.id}
-                style={{
-                  background: course.status === "now" ? "#FFFBEF" : "#fff",
-                  border: `1px solid ${course.status === "now" ? COLORS.gold : COLORS.paperDark}`,
-                  borderRadius: 8,
-                  marginBottom: 12,
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  onClick={() => setExpandedCourseId(isOpen ? null : course.id)}
-                  style={{ display: "flex", alignItems: "center", gap: 16, padding: "16px 18px", cursor: "pointer" }}
-                >
-                  <div
+          {COURSES_2026.map((course, idx) => (
+            <div
+              key={course.id}
+              style={{
+                opacity: course.status === "past" ? 0.65 : 1,
+                marginBottom: 36,
+                paddingBottom: 36,
+                borderBottom: idx < COURSES_2026.length - 1 ? `1px solid ${COLORS.paperDark}` : "none",
+              }}
+            >
+              <p style={{ fontSize: 12.5, letterSpacing: 1, textTransform: "uppercase", color: COLORS.jadeDark, fontWeight: 700, margin: "0 0 6px" }}>
+                {course.dateRange}
+              </p>
+              <h3 style={{ fontFamily: "'Noto Serif', Georgia, serif", fontSize: 21, color: COLORS.ink, margin: "0 0 4px", lineHeight: 1.3 }}>
+                {course.title}
+                {course.status === "now" && (
+                  <span
                     style={{
-                      flexShrink: 0,
-                      width: 58,
-                      textAlign: "center",
-                      background: COLORS.ink,
-                      color: COLORS.paper,
-                      borderRadius: 6,
-                      padding: "8px 4px",
+                      marginLeft: 10,
+                      fontSize: 10.5,
+                      fontWeight: 700,
+                      letterSpacing: 0.3,
+                      textTransform: "uppercase",
+                      padding: "2px 8px",
+                      borderRadius: 10,
+                      background: COLORS.gold,
+                      color: COLORS.ink,
+                      verticalAlign: "middle",
                     }}
                   >
-                    <div style={{ fontSize: 10, letterSpacing: 1, textTransform: "uppercase", color: COLORS.gold, fontWeight: 700 }}>
-                      {course.month}
-                    </div>
-                    <div style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.1 }}>{course.day}</div>
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <p style={{ margin: "0 0 3px", fontSize: 15, fontWeight: 700, color: COLORS.ink, fontFamily: "'Noto Serif', Georgia, serif" }}>
-                      {course.title}
-                      {course.status === "now" && (
-                        <span
-                          style={{
-                            marginLeft: 8,
-                            fontSize: 10.5,
-                            fontWeight: 700,
-                            letterSpacing: 0.3,
-                            textTransform: "uppercase",
-                            padding: "2px 8px",
-                            borderRadius: 10,
-                            background: COLORS.gold,
-                            color: COLORS.ink,
-                          }}
-                        >
-                          {t.happeningNow}
-                        </span>
-                      )}
-                    </p>
-                    <p style={{ margin: 0, fontSize: 12.5, color: "#7A6F5C" }}>
-                      {course.dateRange} · {course.teacher}
-                    </p>
-                  </div>
-                  <span style={{ fontSize: 18, color: COLORS.lacquer, flexShrink: 0, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>
-                    ⌄
+                    {t.happeningNow}
                   </span>
-                </div>
-
-                {isOpen && (
-                  <div style={{ padding: "0 18px 18px", borderTop: `1px solid ${COLORS.paperDark}` }}>
-                    <p style={{ fontSize: 13.5, color: "#4A4135", lineHeight: 1.6, margin: "14px 0 16px" }}>{course.summary}</p>
-                    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                      <button
-                        onClick={() => openCourseDetail(course.id)}
-                        style={{
-                          background: "transparent",
-                          border: `1.5px solid ${COLORS.ink}`,
-                          color: COLORS.ink,
-                          padding: "9px 18px",
-                          fontSize: 13.5,
-                          fontWeight: 600,
-                          borderRadius: 4,
-                          cursor: "pointer",
-                        }}
-                      >
-                        {t.seeDetails}
-                      </button>
-                      {course.status === "open" && (
-                        <button
-                          onClick={() => applyToCourse(course)}
-                          style={{
-                            background: COLORS.lacquer,
-                            color: "#fff",
-                            border: "none",
-                            padding: "9px 18px",
-                            fontSize: 13.5,
-                            fontWeight: 700,
-                            borderRadius: 4,
-                            cursor: "pointer",
-                          }}
-                        >
-                          {t.applyToThisCourse}
-                        </button>
-                      )}
-                    </div>
-                  </div>
                 )}
-              </div>
-            );
-          })}
+                {course.status === "past" && (
+                  <span
+                    style={{
+                      marginLeft: 10,
+                      fontSize: 10.5,
+                      fontWeight: 700,
+                      letterSpacing: 0.3,
+                      textTransform: "uppercase",
+                      padding: "2px 8px",
+                      borderRadius: 10,
+                      background: COLORS.paperDark,
+                      color: "#7A6F5C",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    {t.completed}
+                  </span>
+                )}
+              </h3>
+              <p style={{ fontSize: 14, color: COLORS.lacquer, fontWeight: 600, margin: "0 0 16px" }}>{course.teacher}</p>
+
+              {course.quote && (
+                <p
+                  style={{
+                    borderLeft: `3px solid ${COLORS.gold}`,
+                    paddingLeft: 14,
+                    margin: "0 0 16px",
+                    fontStyle: "italic",
+                    fontFamily: "'Noto Serif', Georgia, serif",
+                    fontSize: 14,
+                    color: "#4A4135",
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {course.quote}
+                </p>
+              )}
+
+              {course.purpose && (
+                <p style={{ fontSize: 14, color: "#4A4135", lineHeight: 1.65, margin: "0 0 14px" }}>
+                  <strong style={{ color: COLORS.ink }}>{t.coursePurpose}: </strong>
+                  {course.purpose}
+                </p>
+              )}
+
+              {course.schedule && (
+                <div style={{ margin: "0 0 14px" }}>
+                  {course.schedule.map((block, i) => (
+                    <p key={i} style={{ fontSize: 13.5, color: "#4A4135", lineHeight: 1.6, margin: "0 0 8px" }}>
+                      <strong style={{ color: COLORS.jadeDark }}>{block.label}: </strong>
+                      {block.text}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {course.requirements && (
+                <p style={{ fontSize: 13.5, color: "#4A4135", lineHeight: 1.65, margin: "0 0 14px" }}>
+                  <strong style={{ color: COLORS.ink }}>{t.courseRequirements}: </strong>
+                  {course.requirements.join(" · ")}
+                </p>
+              )}
+
+              {course.fee && (
+                <p style={{ fontSize: 14, color: COLORS.ink, fontWeight: 700, margin: "0 0 16px" }}>
+                  {course.fee} <span style={{ fontWeight: 400, color: "#7A6F5C" }}>({t.courseDeposit.toLowerCase()}: {course.deposit})</span>
+                </p>
+              )}
+
+              {course.privateContact && (
+                <p style={{ fontSize: 13.5, color: COLORS.ink, lineHeight: 1.6, margin: "0 0 16px" }}>
+                  {t.privateCourseNote} <strong>{course.privateContact}</strong>
+                </p>
+              )}
+
+              {course.status === "open" && (
+                <button
+                  onClick={() => applyToCourse(course)}
+                  style={{
+                    background: COLORS.lacquer,
+                    color: "#fff",
+                    border: "none",
+                    padding: "9px 20px",
+                    fontSize: 13.5,
+                    fontWeight: 700,
+                    borderRadius: 4,
+                    cursor: "pointer",
+                  }}
+                >
+                  {t.applyToThisCourse} →
+                </button>
+              )}
+            </div>
+          ))}
+
+          <div
+            style={{
+              display: "flex",
+              gap: 12,
+              justifyContent: "center",
+              flexWrap: "wrap",
+              marginTop: 8,
+            }}
+          >
+            <button
+              onClick={() => setView("form")}
+              style={{
+                background: COLORS.lacquer,
+                color: "#fff",
+                border: "none",
+                padding: "13px 28px",
+                fontSize: 14.5,
+                fontWeight: 700,
+                borderRadius: 4,
+                cursor: "pointer",
+              }}
+            >
+              {t.ctaScroll} →
+            </button>
+            <a
+              href="https://fiveimmortals.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                background: "transparent",
+                border: `1.5px solid ${COLORS.ink}`,
+                color: COLORS.ink,
+                padding: "13px 28px",
+                fontSize: 14.5,
+                fontWeight: 700,
+                borderRadius: 4,
+                cursor: "pointer",
+                textDecoration: "none",
+              }}
+            >
+              {t.backToWebsite}
+            </a>
+          </div>
         </div>
       </div>
     );
@@ -1194,6 +1337,23 @@ export default function App() {
           </p>
           <h2 style={{ fontFamily: "'Noto Serif', Georgia, serif", fontSize: 28, color: COLORS.ink, margin: "0 0 6px" }}>{course.title}</h2>
           <p style={{ fontSize: 14.5, color: COLORS.lacquer, fontWeight: 600, margin: "0 0 24px" }}>{course.teacher}</p>
+
+          {course.quote && (
+            <div
+              style={{
+                borderLeft: `3px solid ${COLORS.gold}`,
+                paddingLeft: 16,
+                marginBottom: 22,
+                fontStyle: "italic",
+                fontFamily: "'Noto Serif', Georgia, serif",
+                fontSize: 14.5,
+                color: "#4A4135",
+                lineHeight: 1.6,
+              }}
+            >
+              {course.quote}
+            </div>
+          )}
 
           {course.purpose && (
             <div style={{ marginBottom: 22 }}>
