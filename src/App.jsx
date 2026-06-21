@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 /* ============================================================
-   FIVE IMMORTALS TEMPLE — 2026 Course Data (from official site)
+   FIVE IMMORTALS TEMPLE: 2026 Course Data (from official site)
    ============================================================ */
 
 const COURSES_2026 = [
@@ -127,7 +127,7 @@ const COURSES_2026 = [
     schedule: [
       {
         label: "Course Contents",
-        text: "Primarily theory-based, learning Daoist etiquette and taboos. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention methods, and different breathing techniques for various stages. Basics of the Microcosmic Orbit, explanation of key points in alchemical texts: \"49 Barriers\", \"Qingjing Jing — The Scripture of Purity and Tranquility\", \"Da Cheng Jie Yao — Essentials of the Shortcut to the Great Achievement\", \"Tai Yi Jing Hua Zong Zhi — The Secret of the Golden Flower\". Overview of Dao De Jing, Yin Fu Jing, Longmen Heart Method, Huang Ting Jing, Nei Jing Tu. Basic theory of Female Alchemy, fasting, dietary requirements, daily life regulation, and the building-the-foundation period.",
+        text: "Primarily theory-based, learning Daoist etiquette and taboos. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention methods, and different breathing techniques for various stages. Basics of the Microcosmic Orbit, explanation of key points in alchemical texts: \"49 Barriers\", \"Qingjing Jing: The Scripture of Purity and Tranquility\", \"Da Cheng Jie Yao: Essentials of the Shortcut to the Great Achievement\", \"Tai Yi Jing Hua Zong Zhi: The Secret of the Golden Flower\". Overview of Dao De Jing, Yin Fu Jing, Longmen Heart Method, Huang Ting Jing, Nei Jing Tu. Basic theory of Female Alchemy, fasting, dietary requirements, daily life regulation, and the building-the-foundation period.",
       },
       {
         label: "Early Morning (1.5h)",
@@ -262,7 +262,7 @@ const COURSES_2026 = [
     schedule: [
       {
         label: "Course Contents",
-        text: "Primarily theory-based, learning Daoist etiquette and taboos. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention methods, and different breathing techniques for various stages. Basics of the Microcosmic Orbit, explanation of key points in alchemical texts: \"49 Barriers\", \"Qingjing Jing — The Scripture of Purity and Tranquility\", \"Da Cheng Jie Yao — Essentials of the Shortcut to the Great Achievement\", \"Tai Yi Jing Hua Zong Zhi — The Secret of the Golden Flower\". Overview of Dao De Jing, Yin Fu Jing, Longmen Heart Method, Huang Ting Jing, Nei Jing Tu. Basic theory of Female Alchemy, fasting, dietary requirements, daily life regulation, and the building-the-foundation period.",
+        text: "Primarily theory-based, learning Daoist etiquette and taboos. Fundamentals of Internal Alchemy theory, standing qigong methods, sitting meditation to gather qi, sleep-based qi retention methods, and different breathing techniques for various stages. Basics of the Microcosmic Orbit, explanation of key points in alchemical texts: \"49 Barriers\", \"Qingjing Jing: The Scripture of Purity and Tranquility\", \"Da Cheng Jie Yao: Essentials of the Shortcut to the Great Achievement\", \"Tai Yi Jing Hua Zong Zhi: The Secret of the Golden Flower\". Overview of Dao De Jing, Yin Fu Jing, Longmen Heart Method, Huang Ting Jing, Nei Jing Tu. Basic theory of Female Alchemy, fasting, dietary requirements, daily life regulation, and the building-the-foundation period.",
       },
       {
         label: "Early Morning (1.5h)",
@@ -494,7 +494,7 @@ const TEMPLE_RULES = {
 
 
 /* ============================================================
-   FIVE IMMORTALS TEMPLE — Application Landing Page
+   FIVE IMMORTALS TEMPLE: Application Landing Page
    Design language: unrolling scroll, temple red seal, jade + ink palette
    ============================================================ */
 
@@ -537,7 +537,7 @@ const STR = {
     policiesTitle: "General Policies (apply to all courses)",
     courseLabel: "Featured course",
     courseName: "Wudang Sword and Internal Alchemy",
-    courseDates: "June 29 — July 23, 2026",
+    courseDates: "June 29 to July 23, 2026",
     courseTeacher: "Taught by Master Li Shifu and disciple Cheng Ling",
     spotsLabel: "Limited spots",
     formTitle: "Application Form",
@@ -698,7 +698,7 @@ function TextArea(props) {
 function Select({ options, ...props }) {
   return (
     <select {...props} style={{ ...inputBase, ...(props.style || {}) }}>
-      <option value="">—</option>
+      <option value="">-</option>
       {options.map((o) => (
         <option key={o} value={o}>
           {o}
@@ -898,10 +898,10 @@ export default function App() {
           if (imgbbData && imgbbData.success && imgbbData.data && imgbbData.data.url) {
             photoField = imgbbData.data.url;
           } else {
-            photoField = "Photo upload failed — applicant submitted a photo but it could not be hosted.";
+            photoField = "Photo upload failed. Applicant submitted a photo but it could not be hosted.";
           }
         } catch (photoErr) {
-          photoField = "Photo upload failed — applicant submitted a photo but it could not be hosted.";
+          photoField = "Photo upload failed. Applicant submitted a photo but it could not be hosted.";
         }
       }
 
